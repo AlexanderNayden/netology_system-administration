@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "netology-system-administration"
+version = "0.1.0"
+description = "Performing practical tasks at the Netology training center. System Administration course."
+authors = ["Alexander Nayden <alexander.nayden@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "*", from = "." }]
+
+
+[tool.poetry.dependencies]
+python = ">=3.12, <4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.9.0"
+flake8 = "^7.3.0"
+isort = "^6.0.1"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+  \.git
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = ["src"]
+skip = ["build", "dist", ".venv"]
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503", "E501"]
+exclude = ".venv,__pycache__,build,dist"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
