@@ -12,3 +12,10 @@
 ### Screenshot страницы шаблона «Задание 2-3».
 
 ![Screenshot раздела Configuration > Hosts](public/images/screenshot-2.png)
+
+
+## Задание 4
+
+### Screenshot страницы шаблона «Задание 4».
+
+![Screenshot страницы шаблона «Задание 4»](public/images/screenshot-4.png)
