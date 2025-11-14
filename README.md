@@ -19,3 +19,6 @@
 ### Screenshot страницы шаблона «Задание 4».
 
 ![Screenshot страницы шаблона «Задание 4»](public/images/screenshot-4.png)
+
+
+TODO: Удалить all images & clear README.md Merge to branch main local & original !!!!!!!!!!!!!!!!!!
