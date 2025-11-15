@@ -26,16 +26,14 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Custom
-tests/
-
-TEMPLATES.md
-Makefile
+# My files
 Dockerfile
-requirements-test.txt
 docker-compose.yml
-database.py
-
+Makefile
+requirements-test.txt
+tests/
+.flake8
+TEMPLATES.md
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
