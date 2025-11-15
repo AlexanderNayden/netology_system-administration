@@ -34,6 +34,7 @@ Makefile
 Dockerfile
 requirements-test.txt
 docker-compose.yml
+database.py
 
 
 # PyInstaller
