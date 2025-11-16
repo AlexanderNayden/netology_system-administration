@@ -1,0 +1,25 @@
+global
+    daemon
+    maxconn 256
+
+defaults
+    mode http
+    timeout connect 5000ms
+    timeout client 50000ms
+    timeout server 50000ms
+    option httplog
+
+frontend http_front
+    bind :8080
+    acl is_example_local hdr(host) -i example.local
+    use_backend web_servers if is_example_local
+    default_backend default_backend
+
+backend web_servers
+    balance roundrobin
+    server s1 127.0.0.1:8888 weight 2 check
+    server s2 127.0.0.1:9999 weight 3 check
+    server s3 127.0.0.1:7777 weight 4 check
+
+backend default_backend
+    server default_server 127.0.0.1:8888 check
